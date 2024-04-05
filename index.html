@@ -149,6 +149,7 @@
 
     p {
         line-height: 1.25em;
+        text-align: justify;
     }
 
     .caption {
@@ -338,98 +339,53 @@
         <h1 style="color:rgb(71, 132, 216)"><strong>Acoustic Manipulation of Underwater Data Center Operations and Resource Management</strong></h1>
     </div>
 
-    <!-- <div id="authors">
+    <div id="authors">
         <center>
             <div class="author-row">
-                <div class="col-3 text-center"><span style="font-size:25px">Yulong Cao</span><sup>2</sup></div>
-                <div class="col-3 text-center"><span style="font-size:25px">S. Hrushikesh Bhupathiraju</span><sup>1</sup>
-                </div>
-                <div class="col-3 text-center"><span style="font-size:25px">Pirouz Naghavi</span><sup>1</sup></div>
-                <div class="col-3 text-center"><span style="font-size:25px">Takeshi Sugawara</span><sup>3</sup></div>
-                <div class="col-3 text-center"><span style="font-size:25px">Z. Morley Mao</span><sup>2</sup></div>
-                <div class="col-3 text-center"><span style="font-size:25px">Sara Rampazzi</span><sup>1</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Jennifer Sheldon</span></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Weidong Zhu</span></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Adnan Abdullah</span></div>
+                <div class="col-4 text-center"><span style="font-size:25px">S. Hrushikesh</span></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Takeshi Sugawara</span></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Kevin Butler</span></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Md Jahidul Islam</span></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Sara Rampazzi</span></div>
             </div>
             <br>
-            <div class="text-center mt-auto" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
-                <div><sup>1</sup> University of Florida<br>
-                    <br>
-                <a href="https://www.eng.ufl.edu/">
-                  <img width = "350px" src="img/uf-cjc-logo.png" alt="University of Florida logo" class="img-fluid" />
-              <div style = "height:10px"></div>
-                </a>
-                </div>
-                <div><sup>2</sup> University of Michigan<br>
-                    <br>
-                    <a href="https://www.cse.umich.edu">
-                      <img width = "350px" src="img/umich_logo.png" alt="University of Michigan logo" class="img-fluid" />
-                  <div style = "height:10px"></div>
-                    </a>
-                    </div>
-                <div><sup>3</sup> The University of Electro-Communications (Tokyo)<br>
-                <a href="https://www.uec.ac.jp/eng/">
-                  <img width="165px" src="img/uec_logo.png" alt="UEC logo" class="img-fluid" />
-            </a>
-            </div>
-                </div> -->
-            <!-- <center>
-                <br><br>
-                <table align=center width=800px>
-                    <tr>
-                        <td align=center width=300px>
-                            <center>
-                                <span style="font-size:15px"><sup>1</sup> University of Florida</span>
-                            </center>
 
-                        </td>
-                        <td align=center width=300px>
-                            <center>
-                                <span style="font-size:15px"><sup>2</sup> University of Michigan</span>
-                            </center>
-                        </td>
-                        <td align=center width=300px>
-                            <center>
-                                <span style="font-size:15px"><sup>3</sup> The University of Electro-Communications (Tokyo)</span>
-                            </center>
-                        </td>
-                    </tr>
-                </table>
-            </center>
-
-        </center> -->
+        </center>
         
     </div>
 
     <div class ="boxed">
-        <p> Underwater data centers (UDCs) hold promise as next-generation data storage due to their energy efficiency and environmental sustainability benefits. While the natural cooling properties of water save power, the isolated aquatic environment and long-range sound propagation characteristics in water create unique vulnerabilities which differ from those of on-land data centers. Our research discovers the unique vulnerabilities of fault-tolerant storage devices, resource allocation software, and distributed file systems to acoustic injection attacks in UDCs. . 
-         </p>
-            <p> With a realistic testbed approximating UDC server operations, we empirically characterize the capabilities of acoustic injection underwater and find that an attacker can reduce fault-tolerant RAID 5 storage system throughput by 17% up to 100%. Our closed-water analyses reveal that an attacker can (i) cause unresponsiveness and automatic node removal in a distributed filesystem with only 2.4 minutes of sustained acoustic injection, (ii) induce a distributed database’s latency to increase by up to 92.7% to reduce system reliability, and (iii) induce load-balance managers to redirect up to 74% of resources to a target server to cause overload or force resource colocation. Furthermore, we perform open-water experiments in a lake and find that an attacker can cause controlled throughput degradation at the maximum allowable distance of 6.35 m using a commercial speaker. We investigate and discuss the ineffectiveness of standard defenses against acoustic injection attacks and formulate a novel machine learning-based detection system that reaches 96% True Positive and 1.75% False Negative. </p>
+        <p> Underwater data centers (UDCs) hold promise as next-generation data storage due to their energy efficiency and environmental sustainability benefits. While the natural cooling properties of water save power, the isolated aquatic environment and long-range sound propagation characteristics in water create unique vulnerabilities which differ from those of on-land data centers. </p>
+        <p> Our research discovers the unique vulnerabilities of fault-tolerant storage devices, resource allocation software, and distributed file systems to acoustic injection attacks in UDCs.</p>
         
         
-            <img class="scale_img" src = "img/setup_tower.png"></img>
+            <img class="scale_img" src = "img/fig1_new.jpeg" width="800" height="300"></img>
 
     
 
-<p class="my-4">With this work, we aim to help manufacturers proactively protect UDCs against acoustic injection attacks and ensure the security of subsea computing infrastructures. </p>
+<p class="my-4">We investigate and discuss the ineffectiveness of standard defenses against acoustic injection attacks and formulate a novel machine learning-based detection system that reaches 96% True Positive and 1.75% False Negative. With this work, we aim to help manufacturers proactively protect UDCs against acoustic injection attacks and ensure the security of subsea computing infrastructures. </p>
 <p class="my-4">To appear in <a href="https://sp2024.ieee-security.org/camera-ready-instructions.html#">IEEE S&P 2024</a></p>
     
-                            
+<center>           
             <a href="https://arxiv.org/pdf/2006.11946.pdf" class="myButton">Read the Paper</a>
             
+</center>
 
-
-            <a href="#bibtex"  class=" myButton " data-toggle="collapse" role="button">
+            <!-- <a href="#bibtex"  class=" myButton " data-toggle="collapse" role="button">
         Cite <i class="fa fa-quote-right" aria-hidden="true"></i></a>
             <div id="bibtex" style="margin-top: 1.5em;" class="collapse" align="left">
-                <pre style="white-space: pre">
+                <pre style="white-space: pre"> -->
 
-@inproceedings{sugawara2020light,
+<!-- @inproceedings{sugawara2020light,
 title={Light Commands: Laser-Based Audio Injection Attacks on Voice-Controllable Systems},
 author={Sugawara, Takeshi and Cyr, Benjamin and Rampazzi, Sara and Genkin, Daniel and Fu, Kevin},
 booktitle={29th {USENIX} Security Symposium ({USENIX} Security 20)},
 year={2020}
 }
-                </pre>
-            
+                </pre> -->
             
         
 
@@ -437,33 +393,38 @@ year={2020}
     
 </div>
 
-<div class ="boxed" style="margin-top=3em;">
-    <p> 
-        Light Commands were discovered by the following team of academic researchers:
-    </p>
-    <ul>
-<li><strong>Jennifer Sheldon</strong></li>
-<li><strong>Weidong Zhu</strong></li>
-<li><strong>Adnan Abdullah</strong></li>
-<li><strong>Sri Hrushikesh Varma Bhupathiraju</strong></li>
-<li><strong>Takeshi Sugawara</strong></li>
-<li><strong>Kevin Butler</strong></li>
-<li><strong>Md Jahidul Islam</strong></li>
-<li><strong>Sara Rampazzi</strong></li>
+<h1>Q&A</h1>
+				
+					<ul class="question">
+						<p>
+						<li class="question">
+							<b> How does sound effect HDDs?</b>
+							
+								<p class="answer"> ...</p>
+								<p class="answer"> ...</p>
+							<ul class="answer">
+								
+<li class="answer">    Point1 </li>
+<li class="answer">    Point2 </li>
+</ul>	
+					</li>
+						
+						</p>
+						<p>
+						<li class="question">
+							<b>Why are data centers underwater?</b>
+							
+							<p class="answer">
+							</p>
 
-    </ul>
+								
 
-<div class="text-center mt-auto" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
-<div>
-<a href="https://www.cse.umich.edu">
-<img width = "400px" src="img/umich_logo.png" alt="University of Florida logo" class="img-fluid" />
-<div style = "height:10px"></div>
-</a>
-</div>
-<a href="https://www.uec.ac.jp/eng/">
-<img width="165px" src="img/uec.png" alt="UEC logo" class="img-fluid" />
-</a>
-</div>
+					</li>	
+						</p>
+				
+				<h2>Acknowledgments</h2>
+				<p>
+				</p>
 
 
 </body>
