@@ -274,6 +274,32 @@
 				background-color: #ECF9FF;
 				
 	}
+    .container {
+        display: flex; /* Use flexbox for layout */
+    }
+
+    .image-container {
+        position: relative; /* Position container relatively */
+        margin-right: 20px; /* Add spacing between images */
+    }
+
+    .number {
+        position: absolute; /* Position number relatively */
+        /* top: -5; /* Position at the top */
+        /* left: -5; Position at the left */ 
+        /* background-color: rgba(0, 0, 0, 0.5); Background color for visibility */
+        color: rgb(11, 11, 11); /* Text color */
+        padding: 2px 5px; /* Padding for better visibility */
+        border-radius: 5px; /* Rounded corners */
+        display: inline-block; /* Display inline */
+        font-weight: bold; /* Increase boldness */
+        font-size: 20px; /* Increase font size */
+    }
+
+    .image {
+        display: block; /* Make image a block element */
+        max-width: 100%; /* Ensure image doesn't exceed container width */
+    }
 
     .venue {
         /*color: #B6486F;*/
@@ -342,16 +368,42 @@
     <div id="authors">
         <center>
             <div class="author-row">
-                <div class="col-4 text-center"><span style="font-size:25px">Jennifer Sheldon</span></div>
-                <div class="col-4 text-center"><span style="font-size:25px">Weidong Zhu</span></div>
-                <div class="col-4 text-center"><span style="font-size:25px">Adnan Abdullah</span></div>
-                <div class="col-4 text-center"><span style="font-size:25px">S. Hrushikesh</span></div>
-                <div class="col-4 text-center"><span style="font-size:25px">Takeshi Sugawara</span></div>
-                <div class="col-4 text-center"><span style="font-size:25px">Kevin Butler</span></div>
-                <div class="col-4 text-center"><span style="font-size:25px">Md Jahidul Islam</span></div>
-                <div class="col-4 text-center"><span style="font-size:25px">Sara Rampazzi</span></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Jennifer Sheldon</span><sup>†§</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Weidong Zhu</span><sup>†§</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Adnan Abdullah</span><sup>‡</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">S. Hrushikesh</span><sup>†§</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Takeshi Sugawara</span><sup>¶</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Kevin Butler</span><sup>§</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Md Jahidul Islam</span><sup>‡</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Sara Rampazzi</span><sup>†§</sup></div>
             </div>
             <br>
+            <div class="container" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
+                <div class="image-container">
+                    <a href="https://sararampazzi.com/research.html">
+                    <span class="number" style="top: -10; left: -10;">†</span>
+                    <img width = "200px" src="img/cps_sec_logo.PNG" alt="Image 1" class="image">
+                </a>
+                </div>
+                <div class="image-container">
+                    <a href="https://fics.institute.ufl.edu/">
+                    <span class="number" style="top: -10; left: -18;">§</span>
+                    <img width = "170px" src="img/fics_logo.png" alt="Image 2" class="image">
+                </a>
+                </div>
+                <div class="image-container">
+                    <a href="https://robopi.ece.ufl.edu/index.html#">
+                    <span class="number" style="top: -10; left: -10;">‡</span>
+                    <img width = "200px" src="img/robopi_logo.png" alt="Image 3" class="image">
+                </a>
+                </div>
+                <div class="image-container">
+                    <a href="https://www.uec.ac.jp/eng/">
+                        <span class="number" style="top: 0; left: -10;">¶</span>
+                    <img width = "160px" src="img/uec_logo.png" alt="Image 4" class="image">
+                </a>
+                </div>
+            </div>
 
         </center>
         
@@ -360,19 +412,19 @@
     <div class ="boxed">
         <p> Underwater data centers (UDCs) hold promise as next-generation data storage due to their energy efficiency and environmental sustainability benefits. While the natural cooling properties of water save power, the isolated aquatic environment and long-range sound propagation characteristics in water create unique vulnerabilities which differ from those of on-land data centers. </p>
         <p> Our research discovers the unique vulnerabilities of fault-tolerant storage devices, resource allocation software, and distributed file systems to acoustic injection attacks in UDCs.</p>
-        
+        <center>
         
             <img class="scale_img" src = "img/fig1_new.jpeg" width="800" height="300"></img>
-
+        </center>
     
 
 <p class="my-4">We investigate and discuss the ineffectiveness of standard defenses against acoustic injection attacks and formulate a novel machine learning-based detection system that reaches 96% True Positive and 1.75% False Negative. With this work, we aim to help manufacturers proactively protect UDCs against acoustic injection attacks and ensure the security of subsea computing infrastructures. </p>
 <p class="my-4">To appear in <a href="https://sp2024.ieee-security.org/camera-ready-instructions.html#">IEEE S&P 2024</a></p>
     
-<center>           
+<!-- <center>           
             <a href="https://arxiv.org/pdf/2006.11946.pdf" class="myButton">Read the Paper</a>
             
-</center>
+</center> -->
 
             <!-- <a href="#bibtex"  class=" myButton " data-toggle="collapse" role="button">
         Cite <i class="fa fa-quote-right" aria-hidden="true"></i></a>
