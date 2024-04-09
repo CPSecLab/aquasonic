@@ -293,7 +293,7 @@
         border-radius: 5px; /* Rounded corners */
         display: inline-block; /* Display inline */
         font-weight: bold; /* Increase boldness */
-        font-size: 20px; /* Increase font size */
+        /* font-size: 20px; Increase font size */
     }
 
     .image {
@@ -368,41 +368,43 @@
     <div id="authors">
         <center>
             <div class="author-row">
-                <div class="col-4 text-center"><span style="font-size:25px">Jennifer Sheldon</span><sup>†§</sup></div>
-                <div class="col-4 text-center"><span style="font-size:25px">Weidong Zhu</span><sup>†§</sup></div>
-                <div class="col-4 text-center"><span style="font-size:25px">Adnan Abdullah</span><sup>‡</sup></div>
-                <div class="col-4 text-center"><span style="font-size:25px">S. Hrushikesh</span><sup>†§</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Jennifer Sheldon</span><sup>*</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Weidong Zhu</span><sup>*</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Adnan Abdullah</span><sup>*</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">S. Hrushikesh</span><sup>*</sup></div>
                 <div class="col-4 text-center"><span style="font-size:25px">Takeshi Sugawara</span><sup>¶</sup></div>
-                <div class="col-4 text-center"><span style="font-size:25px">Kevin Butler</span><sup>§</sup></div>
-                <div class="col-4 text-center"><span style="font-size:25px">Md Jahidul Islam</span><sup>‡</sup></div>
-                <div class="col-4 text-center"><span style="font-size:25px">Sara Rampazzi</span><sup>†§</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Kevin Butler</span><sup>*</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Md Jahidul Islam</span><sup>*</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Sara Rampazzi</span><sup>*</sup></div>
             </div>
             <br>
             <div class="container" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
                 <div class="image-container">
-                    <a href="https://sararampazzi.com/research.html">
-                    <span class="number" style="top: -10; left: -10;">†</span>
-                    <img width = "200px" src="img/cps_sec_logo.PNG" alt="Image 1" class="image">
-                </a>
-                </div>
-                <div class="image-container">
-                    <a href="https://fics.institute.ufl.edu/">
-                    <span class="number" style="top: -10; left: -18;">§</span>
-                    <img width = "170px" src="img/fics_logo.png" alt="Image 2" class="image">
-                </a>
-                </div>
-                <div class="image-container">
-                    <a href="https://robopi.ece.ufl.edu/index.html#">
-                    <span class="number" style="top: -10; left: -10;">‡</span>
-                    <img width = "200px" src="img/robopi_logo.png" alt="Image 3" class="image">
+                    <a href="https://www.ufl.edu/">
+                    <span class="number" style="top: -20; left: -30; font-size: 50;" >*</span>
+                    <img width = "400px" src="img/uf-cjc-logo.PNG" alt="UF" class="image">
                 </a>
                 </div>
                 <div class="image-container">
                     <a href="https://www.uec.ac.jp/eng/">
-                        <span class="number" style="top: 0; left: -10;">¶</span>
-                    <img width = "160px" src="img/uec_logo.png" alt="Image 4" class="image">
+                    <span class="number" style="top: -5; left: -10; font-size: 25;" >¶</span>
+                    <img width = "450px" src="img/uec_logo.png" alt="UEC" class="image">
                 </a>
                 </div>
+                </div>
+            <br>
+            <div class="container" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
+                <div class="image-container">
+                    <a href="https://sararampazzi.com/research.html">
+                    <img width = "400px" src="img/cps_sec_complimentary.jpg" alt="CPSec" class="image">
+                </a>
+                </div>
+                <div class="image-container">
+                    <a href="https://robopi.ece.ufl.edu/">
+                    <img width = "300px" src="img/robopi_logo.png" alt="RoboPi" class="image">
+                </a>
+                </div>
+
             </div>
 
         </center>
@@ -450,24 +452,16 @@ year={2020}
 					<ul class="question">
 						<p>
 						<li class="question">
-							<b><font size="4">How does sound effect HDDs?</font></b>
+							<b><font size="4">How does the AquaSonic attack work?</font></b>
 							
-								<p class="answer"> <br>All solid structures have a resonant frequency, meaning the natural
-                                    frequency at which a solid structure oscillates. Several parameters can generate resonance frequencies, including the
-                                    elasticity or stiffness of the material from which a system
-                                    or component is made, the physical dimensions, and the
-                                    object’s mass distribution. Additionally, complex structures
-                                    may exhibit multiple resonance frequencies corresponding
-                                    to different vibration modes. Thus transmitting acoustic waves at a frequency that matches
-                                    the resonant frequency of a structure can efficiently convert acoustic waves
-                                    into physical vibrations of the target system</p>
+								<p class="answer"> <br>By playing sounds of certain frequencies in the direction of data centers, attackers can control the performance of storage devices. </p>
 								<p class="answer"> Acoustic injection at the resonant frequency
-                                    of an HDD can vibrate its actuator arm, causing: </p>
+                                    of an HDD can cause: </p>
 							<ul class="answer">
 								
-<li class="answer">  DoS in laptops and security cameras.</li>
-<li class="answer">  Controlled latency of real-world data center workloads</li>
-<li class="answer">  Load manipulation on Servers</li>
+<li class="answer">  Slow down or completely block access to databases and other data-heavy applications</li>
+<li class="answer">  Control which resources applications run on for eavesdropping purposes</li>
+<li class="answer">  Destroy data stored in data centers</li>
 </ul>	
 					</li>
 						
@@ -488,16 +482,98 @@ year={2020}
                                 have submerged structures with metal pressurized vessels containing server racks and filled with nitrogen gas to prevent corrosion, which have demonstrated significant
                                 advantages due to the natural cooling properties of water,
                                 space efficiency, and renewable energy integration.
-							</p>
-
-								
+							</p>	
 
 					</li>	
-						</p>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">How does this work?</font></b>
+							
+							<p class="answer"> <br> Data centers store data with hard drives, and hard drives contain mechanical components that are sensitive to vibrations. Sound is a form of energy, and energy can be converted to different forms. In this case, sound waves propagate through the water and convert to mechanical energy when they reach the enclosure around the hard disk drives. This mechanical energy travels through the enclosure into the drives and vibrates their internal components.
+							</p>	
+
+					</li>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">So why isn’t this a problem in data centers on land?</font></b>
+							
+							<p class="answer"> <br> It is! Storage devices in standard land data centers have been known to have reduced performance during fire alarms and when workers yell at the storage devices. The attack is particularly potent in water because sound travels faster, so it can reach farther.
+
+
+							</p>	
+
+					</li>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">Why does the frequency matter?</font></b>
+							
+							<p class="answer"> <br> All objects have resonant frequencies, which are the frequencies at which the object vibrates the most severely. The resonant frequencies of objects depend on what they are made of and their shape.
+
+							</p>	
+
+					</li>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">What is the range of the AquaSonic attack?</font></b>
+							
+							<p class="answer"> <br>We are able to induce up to 60% reduction in performance at a distance above 6 meters away from a test enclosure and can theoretically reduce performance at up to 1 kilometer away from an actual-size data center enclosure.
+							</p>	
+
+					</li>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">Which devices are susceptible to the AquaSonic attack?</font></b>
+							
+							<p class="answer"> <br>Hard disk drives are susceptible to the attack.
+							</p>	
+
+					</li>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">Does the AquaSonic attack require special equipment?</font></b>
+							
+							<p class="answer"> <br>This attack requires an underwater speaker with sufficient volume which can produce sounds at the resonant frequency of the target structure. We used a commercially available speaker used to communicate with divers and swimmers.
+							</p>	
+
+					</li>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">How can we protect against the AquaSonic attack?</font></b>
+							
+							<p class="answer"> <br>There are a variety of ways to defend against the AquaSonic attack. Some of these include designing the data center in a way to minimize vibration propagation, switching to different storage devices, detecting the attack, and rerouting the workload to other devices.
+							</p>	
+
+					</li>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">Has this attack been performed in the wild?</font></b>
+							
+							<p class="answer"> <br> No, we have not yet seen any indication that this attack has been performed in the wild.
+							</p>	
+
+					</li>
+                    <br>
+                    
+                    
 				
 				<h2>Acknowledgments</h2>
-				<p>
+                <br>
+				<p> <font size="4">We thank the anonymous shepherd and reviewers for
+                    their valuable comments. This research was supported in
+                    part by the National Science Foundation (NSF) under CNS-2055014, the Air Force Office for Scientific Research under FA8650-19-1-1741 and FA8650-19-1-0169, gifts from Facebook and Texas Instrument, and JST CREST JPMJCR23M4.
+                    Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and
+                    do not necessarily reflect the views of the NSF.</font>
+
 				</p>
+                <br>
 
 
 </body>
