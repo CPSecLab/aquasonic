@@ -450,18 +450,43 @@ year={2020}
 <h1>Q&A</h1>
 				
 					<ul class="question">
+                        <p>
+                            <li class="question">
+                                <b><font size="4">What are underwater data centers?</font></b>
+                                
+                                <p class="answer"> <br> Underwater data centers are metal enclosures containing all of the components of traditional data centers (servers, cables, routers, etc.). These data centers are filled with nitrogen gas to prevent corrosion of the components inside. They are also intended to last for years at a time without intervention because it is difficult to send humans underwater to maintain the server hardware. Microsoft, Subsea Cloud, and Offshore Oil Engineering Company, among others, have deployed successful prototypes and released underwater data centers (UDCs) to the market. 
+
+                                </p>	
+    
+                        </li>	
+                        <br>
+
+                        <p>
+                            <li class="question">
+                                <b><font size="4">Are underwater data centers practical?</font></b>
+                                
+                                <p class="answer"> <br> Yes! Underwater data centers are practical because the surrounding water cools the many servers in the data center in a more efficient, environmentally sustainable way than the cooling systems of traditional on-land data centers. As the sizes of data centers and their storage requirements increase with the recent spike in demand for AI and cloud computing, it will become more important to cool them efficiently.
+
+                                </p>	
+    
+                        </li>	
+                        <br>
+
 						<p>
 						<li class="question">
-							<b><font size="4">How does the AquaSonic attack work?</font></b>
+							<b><font size="4">How does the AquaSonic attack work? </font></b>
 							
-								<p class="answer"> <br>By playing sounds of certain frequencies in the direction of data centers, attackers can control the performance of storage devices. </p>
-								<p class="answer"> Acoustic injection at the resonant frequency
-                                    of an HDD can cause: </p>
+								<p class="answer"> <br>We discover that underwater propagation of sound at certain frequency ranges can severely degrade the performance and capabilities of cloud servers enclosed in submerged metallic structures.  
+                                </p>
+								<p class="answer"> This can be used by malicious adversaries to:
+                                </p>
 							<ul class="answer">
 								
-<li class="answer">  Slow down or completely block access to databases and other data-heavy applications</li>
-<li class="answer">  Control which resources applications run on for eavesdropping purposes</li>
-<li class="answer">  Destroy data stored in data centers</li>
+<li class="answer">  Slow down or completely block access to distributed databases and other data-heavy. applications running on cloud servers.
+</li>
+<li class="answer">  Manipulate how resources are distributed in cloud services.
+</li>
+<li class="answer">  Cause errors in data stored in such servers and failures in fault tolerance systems (e.g., RAID).</li>
 </ul>	
 					</li>
 						
@@ -469,19 +494,9 @@ year={2020}
                         <br>
 						<p>
 						<li class="question">
-							<b><font size="4">Why are data centers underwater?</font></b>
+							<b><font size="4">Why does it matter if an adversary can block access to data centers and data applications on cloud servers?</font></b>
 							
-							<p class="answer"> <br> With the increasing interest
-                                in environmental sustainability and the surging data center
-                                market due to a recent spike in demand for AI and cloud
-                                computing, companies are actively seeking alternative
-                                methods to improve energy efficiency and to reduce operating costs. To this end, Microsoft, Subsea Cloud,
-                                and Offshore Oil Engineering Company, among others,
-                                have already deployed successful prototypes and released in
-                                the market underwater data centers (UDCs). Typical UDCs
-                                have submerged structures with metal pressurized vessels containing server racks and filled with nitrogen gas to prevent corrosion, which have demonstrated significant
-                                advantages due to the natural cooling properties of water,
-                                space efficiency, and renewable energy integration.
+							<p class="answer"> <br> Information relating to time-sensitive, safety-critical systems for healthcare, government, and military operations is stored in data centers. Disrupting access to this critical information can have catastrophic consequences.
 							</p>	
 
 					</li>	
@@ -490,17 +505,24 @@ year={2020}
 						<li class="question">
 							<b><font size="4">How does this work?</font></b>
 							
-							<p class="answer"> <br> Data centers store data with hard drives, and hard drives contain mechanical components that are sensitive to vibrations. Sound is a form of energy, and energy can be converted to different forms. In this case, sound waves propagate through the water and convert to mechanical energy when they reach the enclosure around the hard disk drives. This mechanical energy travels through the enclosure into the drives and vibrates their internal components.
+							<p class="answer"> <br> Data centers store data in servers which contain hard disk drives. Hard drives are made of movable mechanical components that are sensitive to vibrations. Sound waves propagate through water and convert to mechanical energy when they travel through solids. This mechanical energy reaches the drives in the enclosure and vibrates their internal components degrading the capability to read and write information from them. We found that by controlling the intensity (volume) of the sound, an attacker can control such degradation to manipulate cloud applications and resource management systems.</p>	
+
+					</li>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">Who can mount the attack?</font></b>
+							
+							<p class="answer"> <br>This attack can be mounted by an adversary who has access to a speaker which can produce sufficiently high volume sounds (we used a commercially available pool and diving speaker) in the frequency range required to induce sufficient vibrations. The attacker must also be able to aim their speaker towards the target data center for the duration of the attack.
 							</p>	
 
 					</li>
                     <br>
                     <p>
 						<li class="question">
-							<b><font size="4">So why isn’t this a problem in data centers on land?</font></b>
+							<b><font size="4">I have heard of acoustic attacks on HDDs before. How is this different?</font></b>
 							
-							<p class="answer"> <br> It is! Storage devices in standard land data centers have been known to have reduced performance during fire alarms and when workers yell at the storage devices. The attack is particularly potent in water because sound travels faster, so it can reach farther.
-
+							<p class="answer"> <br> Previous research has demonstrated that loud sounds in air can cause laptop operating systems to crash. In this work, we investigate how a similar attack can potentially impact data center infrastructure on a broader scale and how the underwater environment opens data centers up to greater risk. The attack is particularly potent in water because sound travels 4 times faster than air and attenuates more slowly. Beyond sound properties, the isolated subsea environment of underwater data centers means that human operators cannot be easily dispatched if HDDs are damaged.
 
 							</p>	
 
@@ -508,10 +530,27 @@ year={2020}
                     <br>
                     <p>
 						<li class="question">
-							<b><font size="4">Why does the frequency matter?</font></b>
+							<b><font size="4">Does the attack matter with redundant storage systems like RAID or distributed databases?</font></b>
 							
-							<p class="answer"> <br> All objects have resonant frequencies, which are the frequencies at which the object vibrates the most severely. The resonant frequencies of objects depend on what they are made of and their shape.
+							<p class="answer"> <br>The attack matters with redundant storage systems like RAID or distributed databases because the redundancy in these systems is designed to protect data in case of disk failure, but the attack can induce failure in multiple disks simultaneously. This highlights the need for data protection systems that do not rely on the assumption that disks will fail independently.
+							</p>	
 
+					</li>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">Are Solid-state hard drives (SSDs) affected by this attack?</font></b>
+							
+							<p class="answer"> <br>No, since they are not composed of moving mechanical components which can vibrate. However, modern data centers rely on hybrid architectures composed of SSDs and HDDs for many reasons, including the need for large storage capacity, high reliability, and lower costs. Our experiments show that the attack increases the maximum delay time in hybrid architectures by 300%.
+							</p>	
+
+					</li>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">Why does the sound frequency matter?</font></b>
+							
+							<p class="answer"> <br>All solid objects have resonant frequencies, which are the frequencies at which the object naturally vibrates. The resonant frequencies of objects depend on what they are made of, their shape, and structure. Only sounds emitted at those frequencies can cause the resonance effect.
 							</p>	
 
 					</li>
@@ -520,16 +559,7 @@ year={2020}
 						<li class="question">
 							<b><font size="4">What is the range of the AquaSonic attack?</font></b>
 							
-							<p class="answer"> <br>We are able to induce up to 60% reduction in performance at a distance above 6 meters away from a test enclosure and can theoretically reduce performance at up to 1 kilometer away from an actual-size data center enclosure.
-							</p>	
-
-					</li>
-                    <br>
-                    <p>
-						<li class="question">
-							<b><font size="4">Which devices are susceptible to the AquaSonic attack?</font></b>
-							
-							<p class="answer"> <br>Hard disk drives are susceptible to the attack.
+							<p class="answer"> <br>We are able to induce up to 60% reduction in performance more than  6 meters away from the enclosure in our outdoor experiments using a commercial speaker. We can theoretically induce a 131.2 nm displacement in an actual-size data center enclosure from 1 kilometer away.
 							</p>	
 
 					</li>
@@ -538,25 +568,37 @@ year={2020}
 						<li class="question">
 							<b><font size="4">Does the AquaSonic attack require special equipment?</font></b>
 							
-							<p class="answer"> <br>This attack requires an underwater speaker with sufficient volume which can produce sounds at the resonant frequency of the target structure. We used a commercially available speaker used to communicate with divers and swimmers.
+							<p class="answer"> <br> No, this attack requires an underwater speaker with sufficient volume which can produce sounds at the resonant frequency of the target structure. We used a commercially available speaker used to communicate with divers and swimmers.
 							</p>	
 
 					</li>
                     <br>
+
                     <p>
 						<li class="question">
 							<b><font size="4">How can we protect against the AquaSonic attack?</font></b>
 							
-							<p class="answer"> <br>There are a variety of ways to defend against the AquaSonic attack. Some of these include designing the data center in a way to minimize vibration propagation, switching to different storage devices, detecting the attack, and rerouting the workload to other devices.
+							<p class="answer"> <br> There are a variety of ways to defend against the AquaSonic attack. Some of these include designing the data center structure in a way to minimizes vibration propagation, adding materials around the servers to attenuate sound and vibrations, active noise cancellation, modifying the firmware of the HDDs, adding physical security around the data center, and using ML-based methods to detect changes in disk behavior to indicate whether an attack is occurring.
 							</p>	
 
 					</li>
                     <br>
+
                     <p>
 						<li class="question">
 							<b><font size="4">Has this attack been performed in the wild?</font></b>
 							
 							<p class="answer"> <br> No, we have not yet seen any indication that this attack has been performed in the wild.
+							</p>	
+
+					</li>
+                    <br>
+
+                    <p>
+						<li class="question">
+							<b><font size="4">Is the sound used in the attack safe?</font></b>
+							
+							<p class="answer"> <br> We use a commercially available speaker which can reach a maximum volume of 180 dB SPL, which is far lower than the capability of sonar, which can reach a volume of 220 dB SPL (remember that in the decibel scale, every 10 dB increase is approximately 10 times louder, so 220 dB SPL is approximately 10000 times louder than the 180 dB SPL sound). We also use hearing protection when performing our experiments.
 							</p>	
 
 					</li>
