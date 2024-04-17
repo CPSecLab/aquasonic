@@ -1,2 +1,2 @@
 # aquasonic
-Website to the AquaSonic
+Website for the AquaSonic paper.
