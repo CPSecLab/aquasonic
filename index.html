@@ -1,4 +1,628 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-Under Construction!
+
+
+<head>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <!-- Custom styles for this template -->
+        
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!-- <link rel="icon" href="img/lightcommands.png"> -->
+</head>
+<style type="text/css">
+    body {
+        font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        font-size: 17px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    }
+
+    h1 {
+        font-weight: 300;
+        line-height: 1.15em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    a:link, a:visited {
+        color: #00aeff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #208799;
+    }
+
+    b:link, b:visited {
+        color: #00aeff;
+        text-decoration: none;
+    }
+
+    b:hover {
+        color: #208799;
+    }
+
+    h1, h2, h3 {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    h2 {
+        font-weight: 400;
+        margin: 16px 0px 4px 0px;
+    }
+
+    .paper-title {
+        padding: 16px 0px 16px 0px;
+    }
+
+    section {
+        margin: 32px 0px 32px 0px;
+        text-align: justify;
+        clear: both;
+    }
+
+    .col-5 {
+        width: 20%;
+        float: left;
+    }
+
+    .col-4 {
+        width: 25%;
+        float: left;
+    }
+
+    .col-3 {
+        width: 33%;
+        float: left;
+    }
+
+    .col-2 {
+        width: 50%;
+        float: left;
+    }
+
+    .col-1 {
+        width: 100%;
+        float: left;
+    }
+
+    .row, .author-row, .affil-row {
+        overflow: auto;
+    }
+
+    .author-row, .affil-row {
+        font-size: 26px;
+    }
+
+    .row {
+        margin: 16px 0px 16px 0px;
+    }
+
+    .authors {
+        font-size: 26px;
+    }
+
+    .affil-row {
+        margin-top: 16px;
+    }
+
+    .teaser {
+        max-width: 100%;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .screenshot {
+        width: 80%;
+        border: 1px solid #ddd;
+    }
+
+    .screenshot-el {
+        margin-bottom: 1px;
+    }
+
+    hr {
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ddd;
+        margin: 0;
+    }
+
+    .material-icons {
+        vertical-align: -6px;
+    }
+
+    p {
+        line-height: 1.25em;
+        text-align: justify;
+    }
+
+    .caption {
+        font-size: 16px;
+        /*font-style: italic;*/
+        color: #666;
+        text-align: center;
+        margin-top: 4px;
+        margin-bottom: 10px;
+    }
+
+    video {
+        display: block;
+        margin: auto;
+    }
+
+    figure {
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #bibtex pre {
+        font-size: 13.5px;
+        background-color: #eee;
+        padding: 16px;
+    }
+
+    .blue {
+        color: #2c82c9;
+        font-weight: bold;
+    }
+
+    .orange {
+        color: #d35400;
+        font-weight: bold;
+    }
+
+    .flex-row {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    .table {
+	width:100%;
+	border:1px solid color-form-highlight;
+    }
+    
+    .table-header {
+    	display:flex;
+    	width:100%;
+    	background:rgb(32, 126, 181);
+    	padding:(half-spacing-unit * 1.5) 0;
+    }
+    
+    .table-row {
+    	display:flex;
+    	width:100%;
+    	padding:(half-spacing-unit * 1.5) 0;
+    
+    }
+    
+    .table-data, .header__item {
+    	flex: 1 1 20%;
+    	text-align:center;
+    }
+    
+    .header__item {
+    	text-transform:uppercase;
+    }
+
+    .paper-btn {
+        position: relative;
+        text-align: center;
+
+        display: inline-block;
+        margin: 8px;
+        padding: 8px 8px;
+
+        border-width: 0;
+        outline: none;
+        border-radius: 2px;
+
+        background-color: #48b64e;
+        color: white !important;
+        font-size: 20px;
+        width: 100px;
+        font-weight: 600;
+    }
+
+    .paper-btn-parent {
+        display: flex;
+        justify-content: center;
+        margin: 16px 0px;
+    }
+
+    .paper-btn:hover {
+        opacity: 0.85;
+    }
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .boxed {
+				padding: 0.5em 2em 2em 2em;
+				background-color: #F8F8F8;
+	
+				max-width: 90%;
+				margin: 0 auto !important; 
+				float: none !important; ;
+	}
+	.boxed_mini {
+				padding: 0.5em 0.5em 0.5em 0.5em;
+				max-width: 40%;
+				background-color: #ECF9FF;
+				
+	}
+    .container {
+        display: flex; /* Use flexbox for layout */
+    }
+
+    .image-container {
+        position: relative; /* Position container relatively */
+        margin-right: 20px; /* Add spacing between images */
+    }
+
+    .number {
+        position: absolute; /* Position number relatively */
+        /* top: -5; /* Position at the top */
+        /* left: -5; Position at the left */ 
+        /* background-color: rgba(0, 0, 0, 0.5); Background color for visibility */
+        color: rgb(11, 11, 11); /* Text color */
+        padding: 2px 5px; /* Padding for better visibility */
+        border-radius: 5px; /* Rounded corners */
+        display: inline-block; /* Display inline */
+        font-weight: bold; /* Increase boldness */
+        /* font-size: 20px; Increase font size */
+    }
+
+    .image {
+        display: block; /* Make image a block element */
+        max-width: 100%; /* Ensure image doesn't exceed container width */
+    }
+
+    .venue {
+        /*color: #B6486F;*/
+        font-size: 30px;
+
+    }
+
+    .myButton_l {
+				display:inline-block;
+				cursor:pointer;
+				font-family: Montserrat,sans-serif;
+				font-weight: bold;
+				font-size:15px;
+				letter-spacing: 0.1em;
+				padding:10px 10px;
+				text-decoration:none;
+			}
+	.myButton {
+				 background-color:#6fc7ee;
+				-moz-border-radius:18px;
+				-webkit-border-radius:18px;
+				border-radius:18px;
+				display:inline-block;
+				cursor:pointer;
+				color:#ffffff;
+				font-family: Montserrat,sans-serif;
+				font-weight: bold;
+				font-size:25px;
+				letter-spacing: 0.1em;
+				padding:10px 50px;
+				text-decoration:none;
+			}
+	.myButton:hover {
+				background-color:#478fcc;
+				color:#ffffff;
+				
+			} 
+
+</style>
+
+<!-- End : Google Analytics Code-->
+<script type="text/javascript" src="../js/hidebib.js"></script>
+<!-- <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic'
+      rel='stylesheet' type='text/css'> -->
+<head>
+    <title>AquaSonic</title>
+    <meta property="og:description" content="You Can’t See Me: Physical Removal Attacks on LiDAR-based Autonomous Vehicles Driving Frameworks"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <!-- <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@ArashVahdat">
+    <meta name="twitter:title" content="Diffusion Models for Adversarial Purification">
+    <meta name="twitter:description"
+          content="We propose <i>DiffPure</i> that uses diffusion models for adversarial purification.">
+    <meta name="twitter:image" content=""> -->
+</head>
+
+<body>
+<div class="flex-row">
+    <div class="paper-title">
+        <h1 style="color:rgb(71, 132, 216)"><span style="font-size:80px"><strong>AquaSonic</strong></span></h1>
+    </div>
+    <div class="paper-title">
+        <h1 style="color:rgb(71, 132, 216)"><strong>Acoustic Manipulation of Underwater Data Center Operations and Resource Management</strong></h1>
+    </div>
+
+    <div id="authors">
+        <center>
+            <div class="author-row">
+                <div class="col-4 text-center"><span style="font-size:25px">Jennifer Sheldon</span><sup>*</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Weidong Zhu</span><sup>*</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Adnan Abdullah</span><sup>*</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">S. Hrushikesh</span><sup>*</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Takeshi Sugawara</span><sup>¶</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Kevin Butler</span><sup>*</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Md Jahidul Islam</span><sup>*</sup></div>
+                <div class="col-4 text-center"><span style="font-size:25px">Sara Rampazzi</span><sup>*</sup></div>
+            </div>
+            <br>
+            <div class="container" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
+                <div class="image-container">
+                    <a href="https://www.ufl.edu/">
+                    <span class="number" style="top: -20; left: -30; font-size: 50;" >*</span>
+                    <img width = "400px" src="img/uf-cjc-logo.PNG" alt="UF" class="image">
+                </a>
+                </div>
+                <div class="image-container">
+                    <a href="https://www.uec.ac.jp/eng/">
+                    <span class="number" style="top: -5; left: -10; font-size: 25;" >¶</span>
+                    <img width = "450px" src="img/uec_logo.png" alt="UEC" class="image">
+                </a>
+                </div>
+                </div>
+            <br>
+            <div class="container" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
+                <div class="image-container">
+                    <a href="https://sararampazzi.com/research.html">
+                    <img width = "400px" src="img/cps_sec_complimentary.jpg" alt="CPSec" class="image">
+                </a>
+                </div>
+                <div class="image-container">
+                    <a href="https://robopi.ece.ufl.edu/">
+                    <img width = "300px" src="img/robopi_logo.png" alt="RoboPi" class="image">
+                </a>
+                </div>
+
+            </div>
+
+        </center>
+        
+    </div>
+
+    <div class ="boxed">
+        <p> Underwater data centers (UDCs) hold promise as next-generation data storage due to their energy efficiency and environmental sustainability benefits. While the natural cooling properties of water save power, the isolated aquatic environment and long-range sound propagation characteristics in water create unique vulnerabilities which differ from those of on-land data centers. </p>
+        <p> Our research discovers the unique vulnerabilities of fault-tolerant storage devices, resource allocation software, and distributed file systems to acoustic attacks.</p>
+        <center>
+        
+            <img class="scale_img" src = "img/fig1_new.jpeg" width="100%" height="60%"></img>
+        </center>
+    
+
+<p class="my-4">We investigate and discuss the effectiveness of standard defenses against acoustic injection attacks and propose a novel machine learning-based detection system that reaches 96% True Positive and 1.75% False Negative. <br>
+<br> With this work, we aim to help manufacturers proactively protect UDCs against acoustic attacks and ensure the security of emerging subsea computing infrastructures. </p>
+<p class="my-4">To appear in <a href="https://sp2024.ieee-security.org/camera-ready-instructions.html#">IEEE Security & Privacy 2024</a></p>
+    
+<center>           
+            <a href="https://arxiv.org/pdf/2006.11946.pdf" class="myButton">Read the preprint</a>
+            
+</center>
+
+            <!-- <a href="#bibtex"  class=" myButton " data-toggle="collapse" role="button">
+        Cite <i class="fa fa-quote-right" aria-hidden="true"></i></a>
+            <div id="bibtex" style="margin-top: 1.5em;" class="collapse" align="left">
+                <pre style="white-space: pre"> -->
+
+<!-- @inproceedings{sugawara2020light,
+title={Light Commands: Laser-Based Audio Injection Attacks on Voice-Controllable Systems},
+author={Sugawara, Takeshi and Cyr, Benjamin and Rampazzi, Sara and Genkin, Daniel and Fu, Kevin},
+booktitle={29th {USENIX} Security Symposium ({USENIX} Security 20)},
+year={2020}
+}
+                </pre> -->
+            
+        
+
+    </div>	
+    
+</div>
+<br><br>
+
+<h1>Q&A</h1>
+				
+					<ul class="question">
+                        <p>
+                            <li class="question">
+                                <b><font size="4">What are underwater data centers and why are they important?</font></b>
+                                
+                                <p class="answer"> <br> Underwater data centers (UDCs) are metal pressurized vessels that house servers beneath the sea. Several successful prototypes have been deployed and released to the market in recent years from companies such as Microsoft, Subsea Cloud, and Offshore Oil Engineering Company. Such underwater infrastructures demonstrate key advantages due to the natural cooling properties of water, space efficiency, and reliability as the underwater environment is less prone to issues like temperature fluctuations and physical degradation. <br><br>
+
+With the recent spike in demand for AI computing and an overall power consumption of data centers projected to reach 35GW by 2030 just in the US, UDCs have been proposed as a sustainable solution that meets increasing data needs while also prioritizing environmental conservation. 
+
+
+                                </p>	
+    
+                        </li>	
+
+						<p>
+						<li class="question">
+							<b><font size="4">How does the AquaSonic attack work? </font></b>
+							
+								<p class="answer"> <br>We discover that propagation of sound underwater at certain frequency ranges can severely degrade the performance and capabilities of cloud servers enclosed in submerged metallic structures.  
+                                </p>
+								<p class="answer"> This can be used by malicious adversaries to:
+                                </p>
+							<ul class="answer">
+								
+<li class="answer">  Slow down or completely block access to distributed databases and other data-heavy applications running on cloud servers.
+</li>
+<li class="answer">  Manipulate how resources are distributed in cloud services.
+</li>
+<li class="answer">  Cause errors in data stored in such servers and failures in fault tolerance systems such as RAID.</li>
+</ul>	
+					</li>
+						
+						</p>
+                        <br>
+						<p>
+						<li class="question">
+							<b><font size="4">Why does it matter if an adversary can block access to data centers and data applications on cloud servers?</font></b>
+							
+							<p class="answer"> <br> Information relating to time-sensitive, safety-critical systems for healthcare, government, and military operations is stored in data centers. Disrupting access to this critical information can have severe consequences.
+							</p>	
+
+					</li>	
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">How does this attack work?</font></b>
+							
+							<p class="answer"> <br> Data centers store data in servers which contain storage systems such as hard disk drives (HDDs). Hard drives are made of movable mechanical components that are sensitive to vibrations at certain frequencies (resonance frequencies). Sound waves propagate through water and convert to mechanical energy when they travel through solids. This mechanical energy reaches the drives in the enclosure and vibrates their internal components degrading the capability to read and write information from them. 
+
+<br> <br> We also found that by controlling the intensity (volume) of the transmitted sound, malicious adversaries can control such degradation to manipulate cloud applications and resource management systems.
+
+					</li>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">Who can mount the attack?</font></b>
+							
+							<p class="answer"> <br> We consider budgeted attackers who want to achieve high-level control over UDC infrastructure critical operations, such as redirecting server workloads, altering resource allocation, and achieving control over response latency and performance of cloud applications, including disrupting their functioning.
+							</p>	
+
+					</li>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">I have heard of acoustic attacks on HDDs before. How is this different?</font></b>
+							
+							<p class="answer"> <br> Previous research has demonstrated that loud sounds in the air can cause laptop operating systems to crash and also permanently damage HDDs. In this work, we show how underwater sound can impact cloud applications and resource management systems on a broader scale placing emerging UDC technology at greater risk. The attack is particularly efficient in water because sound travels 4 times faster than air and attenuates more slowly. 
+
+<br> <br> Beyond sound properties, the isolated subsea environment of UDCs means that human operators cannot easily access the subsea infrastructure and quickly restore the affected system or substitute damaged parts. 
+
+
+							</p>	
+
+					</li>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">Does the attack matter with redundant storage systems like RAID or distributed databases?</font></b>
+							
+							<p class="answer"> <br>The attack matters with redundant storage systems like RAID or distributed databases because the redundancy in these systems is designed to protect data in case of disk failure, but the attack can induce failure in multiple disks simultaneously. This highlights the need for data protection systems that do not rely on the assumption that disks will fail independently.
+							</p>	
+
+					</li>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">Are Solid-state hard drives (SSDs) affected by this attack?</font></b>
+							
+							<p class="answer"> <br>No, since they are not composed of moving mechanical components which can vibrate. However, current data center platforms like Alibaba Pangu, Microsoft Azure, Amazon, and Google rely on hybrid architectures composed of SSDs and HDDs for many reasons, including the need for large storage capacity, high reliability, and lower costs. Our experiments show that the attack can increase the latency significantly, with up to 300% to 400% delay in saving data.
+							</p>	
+
+					</li>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">Why does the sound frequency matter?</font></b>
+							
+							<p class="answer"> <br>All solid objects have resonant frequencies, which are the frequencies at which the object naturally vibrates. The resonant frequencies of objects depend on what they are made of, their shape, and structure. Only sounds emitted at those frequencies can cause the resonance effect.
+							</p>	
+
+					</li>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">What is the range of the AquaSonic attack?</font></b>
+							
+							<p class="answer"> <br>We are able to induce more than 60% reduction in performance more than 6 meters away from a submerged aluminum enclosure in our open-water experiment setup, by only using a commercial speaker. Based on our simulation model we find that an attacker can theoretically induce performance degradation over several kilometers using powerful speakers such as the one used in military ships and submarines.
+							</p>	
+
+					</li>
+                    <br>
+                    <p>
+						<li class="question">
+							<b><font size="4">Does the AquaSonic attack require special equipment?</font></b>
+							
+							<p class="answer"> <br> This attack can be mounted by an adversary using an underwater speaker with an amplifier which can produce sufficiently high-volume sounds in the frequency range required to induce sufficient vibrations. We used a commercial speaker used to communicate with divers and swimmers to transmit a sound at ~5 KHz. 
+The farther away the victim's eclosure, the more the adversary requires a high-power speaker.
+							
+							
+							</p>	
+
+					</li>
+                    <br>
+
+                    <p>
+						<li class="question">
+							<b><font size="4">How can we protect against the AquaSonic attack?</font></b>
+							
+							<p class="answer"> <br> There are a variety of ways to defend against the AquaSonic attack. Some of these include designing the data center structure in a way to reduce vibration propagation, using sound-absorbing materials around the servers to attenuate sound, implementing active noise cancellation, and modifying the firmware of the HDDs to mitigate the oscillations’ effect.
+
+<br><br> We propose a machine learning-based detection method to detect simultaneous changes in the storage system behavior to indicate whether an attack is occurring and promptly act. 
+
+							</p>	
+
+					</li>
+                    <br>
+
+                    <p>
+						<li class="question">
+							<b><font size="4">Has this attack been performed in the wild?</font></b>
+							
+							<p class="answer"> <br> No, we have not yet seen any indication that this attack has been performed in the wild.
+							</p>	
+
+					</li>
+                    <br>
+
+                    <p>
+						<li class="question">
+							<b><font size="4">Is the sound used in the attack safe?</font></b>
+							
+							<p class="answer"> <br> We use a commercial speaker which can reach a maximum volume of 180 dB sound pressure level (SPL) to emit sounds in the audible range for brief time periods. Please be aware that experiments involving loud sounds can pose serious risks to your hearing. Prolonged exposure to high-decibel sounds can lead to temporary or even permanent hearing loss. 
+During our experiment, we used appropriate hearing protection and controlled environments.
+
+							</p>	
+
+					</li>
+                    <br>
+                    
+                    
+				
+				<h2>Acknowledgments</h2>
+                <br>
+				<p> <font size="4">We thank the anonymous shepherd and reviewers for
+                    their valuable comments. This research was supported in
+                    part by the National Science Foundation (NSF) under CNS-2055014, the Air Force Office for Scientific Research under FA8650-19-1-1741 and FA8650-19-1-0169, gifts from Facebook and Texas Instrument, and JST CREST JPMJCR23M4.
+                    Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and
+                    do not necessarily reflect the views of the NSF.</font>
+
+				</p>
+                <br>
+
+
+</body>
 </html>
