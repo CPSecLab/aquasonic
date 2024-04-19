@@ -261,7 +261,7 @@
         padding-right: 16px;
     }
     .boxed {
-				padding: 0.5em 2em 80px 2em;
+				padding: 1em 2em 2em 2em;
 				background-color: #F8F8F8;
 				max-width: 90%;
 				margin: 0 auto !important; 
@@ -345,7 +345,7 @@
       rel='stylesheet' type='text/css'> -->
 <head>
     <title>AquaSonic</title>
-    <meta property="og:description" content="You Can’t See Me: Physical Removal Attacks on LiDAR-based Autonomous Vehicles Driving Frameworks"/>
+    <meta property="og:description" content="AquaSonic: Acoustic Manipulation of Underwater Data Center Operations and Resource Management"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <!-- <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@ArashVahdat">
@@ -356,8 +356,8 @@
 </head>
 
 <body>
-    <section id="head">
 <div class="flex-row">
+    <center>
     <div class="paper-title">
         <h1 style="color:rgb(71, 132, 216)"><span style="font-size:80px"><strong>AquaSonic</strong></span></h1>
     </div>
@@ -366,7 +366,7 @@
     </div>
 
     <div id="authors">
-        <center>
+        
             <div class="author-row">
                 <div class="col-4 text-center"><span style="font-size:25px">Jennifer Sheldon</span><sup>*</sup></div>
                 <div class="col-4 text-center"><span style="font-size:25px">Weidong Zhu</span><sup>*</sup></div>
@@ -379,27 +379,24 @@
             </div>
             <br>
             <div class="container" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
-                <div class="image-container">
-                    <a href="https://www.ufl.edu/">
-                    <span class="number" style="top: -20; left: -30; font-size: 50;" >*</span>
-                    <img width = "400px" src="img/uf-cjc-logo.png" alt="UF" class="image">
+                <div class="col-2">
+                <a href="https://www.eng.ufl.edu/">
+                  <img width = "400px" src="img/uf-cjc-logo.png" alt="University of Florida logo" class="image" />
                 </a>
                 </div>
-                <div class="image-container">
-                    <a href="https://www.uec.ac.jp/eng/">
-                    <span class="number" style="top: -5; left: -10; font-size: 25;" >¶</span>
-                    <img width = "450px" src="img/uec_logo.png" alt="UEC" class="image">
-                </a>
-                </div>
+                <div class="col-2">
+                <a href="https://www.uec.ac.jp/eng/">
+                  <img width="420px" src="img/uec_logo.png" alt="UEC logo" class="image" />
+            </a>
             </div>
             <br>
             <div class="container" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
-                <div class="image-container">
+                <div class="col-2">
                     <a href="https://sararampazzi.com/research.html">
                     <img width = "400px" src="img/logo_high_contrast.png" alt="CPSec" class="image">
                 </a>
                 </div>
-                <div class="image-container">
+                <div class="col-2">
                     <a href="https://robopi.ece.ufl.edu/">
                     <img width = "300px" src="img/robopi_logo.PNG" alt="RoboPi" class="image">
                 </a>
@@ -410,24 +407,26 @@
         </center>
         
     </div>
-
-    <div>
+    <div class="boxed">
+    <div class="flex-row">
         <p> Underwater data centers (UDCs) hold promise as next-generation data storage due to their energy efficiency and environmental sustainability benefits. While the natural cooling properties of water save power, the isolated aquatic environment and long-range sound propagation characteristics in water create unique vulnerabilities which differ from those of on-land data centers. </p>
         <p> Our research discovers the unique vulnerabilities of fault-tolerant storage devices, resource allocation software, and distributed file systems to acoustic attacks.</p>
         <center>
         
-            <img class="scale_img" src = "img/fig1_new.jpeg" width="100%" height="60%"></img>
+            <img class="scale_img" src = "img/fig1_new.jpeg" width="100%" height="100%"></img>
         </center>
     
 
-<p class="my-4">We investigate and discuss the effectiveness of standard defenses against acoustic injection attacks and propose a novel machine learning-based detection system that reaches 96% True Positive and 1.75% False Negative. <br>
-<br> With this work, we aim to help manufacturers proactively protect UDCs against acoustic attacks and ensure the security of emerging subsea computing infrastructures. </p>
-<p class="my-4">To appear in <a href="https://sp2024.ieee-security.org/">IEEE Security & Privacy 2024</a></p>
-    
+<br><p>We investigate and discuss the effectiveness of standard defenses against acoustic injection attacks and propose a novel machine learning-based detection system that reaches 96% True Positive and 1.75% False Negative. <br>
+<br> With this work, we aim to help manufacturers proactively protect UDCs against acoustic attacks and ensure the security of emerging subsea computing infrastructures. 
+<br>To appear in <a href="https://sp2024.ieee-security.org/">IEEE Security & Privacy 2024</a></p>
+
+
 <center>           
             <a href="https://arxiv.org/pdf/2404.11815.pdf" class="myButton">Read the preprint</a>
             
 </center>
+</div>
 
             <!-- <a href="#bibtex"  class=" myButton " data-toggle="collapse" role="button">
         Cite <i class="fa fa-quote-right" aria-hidden="true"></i></a>
@@ -447,7 +446,7 @@ year={2020}
     </div>	
     
 </div>
-</section>
+
 <br><br>
 <section id="qanda">
 <h1>Q&A</h1>
