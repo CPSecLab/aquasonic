@@ -261,9 +261,8 @@
         padding-right: 16px;
     }
     .boxed {
-				padding: 0.5em 2em 2em 2em;
+				padding: 0.5em 2em 80px 2em;
 				background-color: #F8F8F8;
-	
 				max-width: 90%;
 				margin: 0 auto !important; 
 				float: none !important; ;
@@ -357,6 +356,7 @@
 </head>
 
 <body>
+    <section id="head">
 <div class="flex-row">
     <div class="paper-title">
         <h1 style="color:rgb(71, 132, 216)"><span style="font-size:80px"><strong>AquaSonic</strong></span></h1>
@@ -391,12 +391,12 @@
                     <img width = "450px" src="img/uec_logo.png" alt="UEC" class="image">
                 </a>
                 </div>
-                </div>
+            </div>
             <br>
             <div class="container" style="width:100%;margin-top: 1.5em; margin-bottom: 1.5em; display:flex;justify-content:space-around;align-items:center; flex-wrap: wrap;">
                 <div class="image-container">
                     <a href="https://sararampazzi.com/research.html">
-                    <img width = "400px" src="img/cps_sec_complimentary.jpg" alt="CPSec" class="image">
+                    <img width = "400px" src="img/CPSec_logo.jpeg" alt="CPSec" class="image">
                 </a>
                 </div>
                 <div class="image-container">
@@ -411,7 +411,7 @@
         
     </div>
 
-    <div class ="boxed">
+    <div>
         <p> Underwater data centers (UDCs) hold promise as next-generation data storage due to their energy efficiency and environmental sustainability benefits. While the natural cooling properties of water save power, the isolated aquatic environment and long-range sound propagation characteristics in water create unique vulnerabilities which differ from those of on-land data centers. </p>
         <p> Our research discovers the unique vulnerabilities of fault-tolerant storage devices, resource allocation software, and distributed file systems to acoustic attacks.</p>
         <center>
@@ -422,10 +422,10 @@
 
 <p class="my-4">We investigate and discuss the effectiveness of standard defenses against acoustic injection attacks and propose a novel machine learning-based detection system that reaches 96% True Positive and 1.75% False Negative. <br>
 <br> With this work, we aim to help manufacturers proactively protect UDCs against acoustic attacks and ensure the security of emerging subsea computing infrastructures. </p>
-<p class="my-4">To appear in <a href="https://sp2024.ieee-security.org/camera-ready-instructions.html#">IEEE Security & Privacy 2024</a></p>
+<p class="my-4">To appear in <a href="https://sp2024.ieee-security.org/">IEEE Security & Privacy 2024</a></p>
     
 <center>           
-            <a href="https://arxiv.org/pdf/2006.11946.pdf" class="myButton">Read the preprint</a>
+            <a href="https://arxiv.org/pdf/2404.11815.pdf" class="myButton">Read the preprint</a>
             
 </center>
 
@@ -447,24 +447,25 @@ year={2020}
     </div>	
     
 </div>
+</section>
 <br><br>
-
+<section id="qanda">
 <h1>Q&A</h1>
 				
 					<ul class="question">
                         <p>
                             <li class="question">
-                                <b><font size="4">What are underwater data centers and why are they important?</font></b>
+                                <b><font size="4">What are underwater data centers, and why are they important?                                </font></b>
                                 
-                                <p class="answer"> <br> Underwater data centers (UDCs) are metal pressurized vessels that house servers beneath the sea. Several successful prototypes have been deployed and released to the market in recent years from companies such as Microsoft, Subsea Cloud, and Offshore Oil Engineering Company. Such underwater infrastructures demonstrate key advantages due to the natural cooling properties of water, space efficiency, and reliability as the underwater environment is less prone to issues like temperature fluctuations and physical degradation. <br><br>
+                                <p class="answer"> <br>Underwater data centers (UDCs) are metal pressurized vessels that house servers beneath the sea. Several successful prototypes have been deployed and released to the market in recent years from companies such as Microsoft, Subsea Cloud, and Offshore Oil Engineering Company. Such underwater infrastructures demonstrate several key advantages due to the natural cooling properties of water, space efficiency compared to their in-land equivalent, and reliability as the underwater environment is less prone to issues like temperature fluctuations and physical degradation. <br><br>
 
-With the recent spike in demand for AI computing and an overall power consumption of data centers projected to reach 35GW by 2030 just in the US, UDCs have been proposed as a sustainable solution that meets increasing data needs while also prioritizing environmental conservation. 
+                                    With the recent spike in demand for AI computing and an overall power consumption of data centers projected to reach 35GW by 2030 just in the US, UDCs have been proposed as a sustainable solution that meets increasing data needs while also prioritizing environmental conservation. 
 
 
                                 </p>	
     
                         </li>	
-
+                        <br>
 						<p>
 						<li class="question">
 							<b><font size="4">How does the AquaSonic attack work? </font></b>
@@ -498,7 +499,7 @@ With the recent spike in demand for AI computing and an overall power consumptio
 						<li class="question">
 							<b><font size="4">How does this attack work?</font></b>
 							
-							<p class="answer"> <br> Data centers store data in servers which contain storage systems such as hard disk drives (HDDs). Hard drives are made of movable mechanical components that are sensitive to vibrations at certain frequencies (resonance frequencies). Sound waves propagate through water and convert to mechanical energy when they travel through solids. This mechanical energy reaches the drives in the enclosure and vibrates their internal components degrading the capability to read and write information from them. 
+							<p class="answer"> <br> Data centers store data in servers which contain storage systems such as hard disk drives (HDDs). Hard drives are made of movable mechanical components sensitive to vibrations at certain frequencies (resonance frequencies). Sound waves propagate through water and convert to mechanical energy when they travel through solids. This mechanical energy reaches the drives in the enclosure and vibrates their internal components, degrading their ability to read and write information. 
 
 <br> <br> We also found that by controlling the intensity (volume) of the transmitted sound, malicious adversaries can control such degradation to manipulate cloud applications and resource management systems.
 
@@ -515,7 +516,7 @@ With the recent spike in demand for AI computing and an overall power consumptio
                     <br>
                     <p>
 						<li class="question">
-							<b><font size="4">I have heard of acoustic attacks on HDDs before. How is this different?</font></b>
+							<b><font size="4">I have heard of acoustic attacks on hard disk drives before. How is this different?</font></b>
 							
 							<p class="answer"> <br> Previous research has demonstrated that loud sounds in the air can cause laptop operating systems to crash and also permanently damage HDDs. In this work, we show how underwater sound can impact cloud applications and resource management systems on a broader scale placing emerging UDC technology at greater risk. The attack is particularly efficient in water because sound travels 4 times faster than air and attenuates more slowly. 
 
@@ -530,7 +531,7 @@ With the recent spike in demand for AI computing and an overall power consumptio
 						<li class="question">
 							<b><font size="4">Does the attack matter with redundant storage systems like RAID or distributed databases?</font></b>
 							
-							<p class="answer"> <br>The attack matters with redundant storage systems like RAID or distributed databases because the redundancy in these systems is designed to protect data in case of disk failure, but the attack can induce failure in multiple disks simultaneously. This highlights the need for data protection systems that do not rely on the assumption that disks will fail independently.
+							<p class="answer"> <br>The attack matters with redundant storage systems like RAID or distributed databases because the redundancy in these systems is designed to protect data in case of disk failure, but we demonstrate that sound injection can induce failure in multiple disks simultaneously. This highlights the need for data protection systems that do not rely on the assumption that disks will fail independently.
 							</p>	
 
 					</li>
@@ -557,7 +558,7 @@ With the recent spike in demand for AI computing and an overall power consumptio
 						<li class="question">
 							<b><font size="4">What is the range of the AquaSonic attack?</font></b>
 							
-							<p class="answer"> <br>We are able to induce more than 60% reduction in performance more than 6 meters away from a submerged aluminum enclosure in our open-water experiment setup, by only using a commercial speaker. Based on our simulation model we find that an attacker can theoretically induce performance degradation over several kilometers using powerful speakers such as the one used in military ships and submarines.
+							<p class="answer"> <br>We are able to induce more than 60% reduction in performance more than  6 meters away from a submerged aluminum enclosure in our open-water experiment setup, by only using a commercial speaker. Based on our simulation model we find that an attacker can theoretically induce performance degradation over several kilometers using powerful speakers such as the one used in military ships and submarines.
 							</p>	
 
 					</li>
@@ -567,7 +568,7 @@ With the recent spike in demand for AI computing and an overall power consumptio
 							<b><font size="4">Does the AquaSonic attack require special equipment?</font></b>
 							
 							<p class="answer"> <br> This attack can be mounted by an adversary using an underwater speaker with an amplifier which can produce sufficiently high-volume sounds in the frequency range required to induce sufficient vibrations. We used a commercial speaker used to communicate with divers and swimmers to transmit a sound at ~5 KHz. 
-The farther away the victim's eclosure, the more the adversary requires a high-power speaker.
+                                The farther away the victim's eclosure, the more the adversary requires a high-power speaker.
 							
 							
 							</p>	
@@ -602,8 +603,8 @@ The farther away the victim's eclosure, the more the adversary requires a high-p
 						<li class="question">
 							<b><font size="4">Is the sound used in the attack safe?</font></b>
 							
-							<p class="answer"> <br> We use a commercial speaker which can reach a maximum volume of 180 dB sound pressure level (SPL) to emit sounds in the audible range for brief time periods. Please be aware that experiments involving loud sounds can pose serious risks to your hearing. Prolonged exposure to high-decibel sounds can lead to temporary or even permanent hearing loss. 
-During our experiment, we used appropriate hearing protection and controlled environments.
+							<p class="answer"> <br> We use a commercial speaker which can reach a maximum volume of 180 dB sound pressure level (SPL) to emit sounds in the audible range for brief time periods. Please be aware that experiments involving loud sounds can pose serious risks to your hearing. Prolonged exposure to high-decibel sounds can lead to temporary or even permanent hearing loss.<br>
+                                During our experiment, we used appropriate hearing protection and controlled environments.
 
 							</p>	
 
@@ -622,7 +623,7 @@ During our experiment, we used appropriate hearing protection and controlled env
 
 				</p>
                 <br>
-
+            </section>
 
 </body>
 </html>
