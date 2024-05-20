@@ -294,6 +294,21 @@
         font-weight: bold; /* Increase boldness */
         /* font-size: 20px; Increase font size */
     }
+    .gallery {
+            display: flex;
+            justify-content: space-around; /* Adjusts the spacing between images */
+            align-items: flex-start; /* Aligns images to the top */
+            gap: 20px; /* Adds space between the figures */
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        }
+    figure {
+            text-align: center;
+            margin: 0;
+        }
+    figcaption {
+            font-size: 16px;
+            color: #2656f5;
+        }
 
     .image {
         display: block; /* Make image a block element */
@@ -479,6 +494,32 @@
 </section>
 
 <section id="news">
+    <h2>In The News</h2>
+    <br>
+    <div class="gallery">
+        <figure>
+            <a href="https://www.newscientist.com/article/2430616-underwater-data-centres-could-be-destroyed-by-loud-noises/">
+            <img src="img/newscientist.PNG" width = "400px" alt="Description of image 1">
+            <figcaption><b>Underwater data centres could be destroyed by loud noises</b></figcaption>
+            </a>
+        </figure>
+        <figure>
+            <a href="https://www.computing.co.uk/news/4209265/underwater-datacentres-vulnerable-sonic-attacks">
+            <img src="img/computing.PNG" width = "300px" alt="Description of image 2">
+            <figcaption><b>Underwater datacentres vulnerable to sonic attacks</b></figcaption>
+            </a>
+        </figure>
+        <figure>
+            <a href="https://news.ufl.edu/2024/05/underwater-data-center-security/">
+            <img src="img/UF-news.PNG" alt="Description of image 3">
+            <figcaption><b>Underwater data centers are the future. But a speaker system could cripple them</b></figcaption>
+            </a>
+        </figure>
+    </div>
+</section>
+
+
+<!-- <section id="news">
     <br>
     <h2>In The News</h2>
     <div class="centered-list-container">
@@ -489,7 +530,7 @@
         </ul>
     </div>
        
-</section>
+</section> -->
 
 
 <section id="qanda">
